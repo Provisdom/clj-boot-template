@@ -2,7 +2,9 @@
 (def version "0.1.1-SNAPSHOT")
 
 (set-env! :resource-paths #{"src"}
-          :dependencies '[[adzerk/bootlaces "0.1.13"]])
+          :dependencies '[[org.clojure/clojure "1.8.0"]
+                          [adzerk/bootlaces "0.1.13"]
+                          [seancorfield/boot-new "0.4.3"]])
 
 (task-options!
   pom {:project     project
