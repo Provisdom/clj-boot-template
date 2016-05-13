@@ -8,8 +8,8 @@
   pom {:project     project
        :version     version
        :description "The provisdom boot-new template"
-       :url         "https://github.com/Provisdom/boot-new"
-       :scm         {:url "https://github.com/seancorfield/clj-boot-template"}
+       :url         "https://github.com/Provisdom/clj-boot-template"
+       :scm         {:url "https://github.com/Provisdom/clj-boot-template"}
        :license     {"Eclipse Public License"
                      "http://www.eclipse.org/legal/epl-v10.html"}}
   push {:gpg-sign false})
