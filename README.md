@@ -12,7 +12,7 @@ boot -d seancorfield/boot-new new -t provisdom-clj -n project-name
 
 For more advanced usage see [boot-new](https://github.com/seancorfield/boot-new).
 
-
+---
 Copyright © 2016 Provisdom
 
 Distributed under the Eclipse Public License either version 1.0 or (at
