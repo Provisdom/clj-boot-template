@@ -1,5 +1,5 @@
 (def project 'provisdom-clj/boot-template)
-(def version "0.1.0")
+(def version "0.1.1-SNAPSHOT")
 
 (set-env! :resource-paths #{"src"}
           :dependencies '[[adzerk/bootlaces "0.1.13"]])
