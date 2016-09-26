@@ -24,4 +24,5 @@
                     ["src/{{nested-dirs}}.clj" (render "core.clj" data)]
                     ["test/{{nested-dirs}}_test.clj" (render "test.clj" data)]
                     ["LICENSE" (render "LICENSE" data)]
-                    ["CHANGELOG.md" (render "CHANGELOG.md" data)])))
+                    ["CHANGELOG.md" (render "CHANGELOG.md" data)]
+                    [".envrc" (render "envrc" data)])))
