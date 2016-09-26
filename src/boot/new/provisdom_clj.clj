@@ -15,7 +15,7 @@
               :nested-dirs (name-to-path main-ns)
               :year        (year)
               :date        (date)}]
-    (println "Generating a project called" name "based on the 'app' template.")
+    (println "Generating a project called" name "based on the 'provisdom-clj' template.")
     (->files data
              ["build.boot" (render "build.boot" data)]
              ["README.md" (render "README.md" data)]
