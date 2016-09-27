@@ -1,4 +1,4 @@
-(ns {{test-namespace}}
+(ns {{test-ns}}
   (:require
     [clojure.test :refer :all]
     [{{namespace}} :as {{main-ns-refer}}]))
