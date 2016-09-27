@@ -7,6 +7,10 @@
   [s]
   (= (last (str/split s #"\.")) "core"))
 
+(defn change-ns-name
+  [s new-name]
+  (str (str/join "." (butlast (str/split s #"\."))) "." new-name))
+
 (defn name->dirs
   [n]
   (as-> n $ (str/split $ #"\.") (butlast $) (str/join java.io.File/separator $) (boot-new/sanitize $)))
@@ -17,13 +21,15 @@
   (let [render (boot-new/renderer "provisdom-clj")
         main-ns (let [n (boot-new/multi-segment (boot-new/sanitize-ns name))]
                   (if (has-core? n) n (str n ".core")))
-        data {:raw-name    name
-              :name        (boot-new/project-name name)
-              :namespace   main-ns
-              :nested-dirs (boot-new/name-to-path main-ns)
-              :parent-dirs (name->dirs main-ns)
-              :year        (boot-new/year)
-              :date        (boot-new/date)}]
+        data {:raw-name      name
+              :name          (boot-new/project-name name)
+              :namespace     main-ns
+              :test-ns       (change-ns-name main-ns "t-core")
+              :main-ns-refer (str/join (take 2 (boot-new/project-name name)))
+              :nested-dirs   (boot-new/name-to-path main-ns)
+              :parent-dirs   (name->dirs main-ns)
+              :year          (boot-new/year)
+              :date          (boot-new/date)}]
     (println "Generating a project called" name "based on the 'provisdom-clj' template.")
     (boot-new/->files
       data
