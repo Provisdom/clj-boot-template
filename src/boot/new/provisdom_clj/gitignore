@@ -17,3 +17,4 @@ project.clj
 *.iml
 .nrepl-history
 .nrepl-port
+out
