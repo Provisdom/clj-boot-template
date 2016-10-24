@@ -4,7 +4,7 @@
 (set-env! :resource-paths #{"src"}
           :source-paths #{"test"}
           :dependencies '[[org.clojure/clojure "RELEASE"]
-                          [provisdom/boot-tasks "RELEASE"]
+                          [provisdom/boot-tasks "RELEASE" :scope "test"]
                           [adzerk/boot-test "RELEASE" :scope "test"]])
 
 (require '[adzerk.boot-test :refer [test]]
