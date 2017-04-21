@@ -7,7 +7,7 @@ A boot template that generates Clojure projects
 ## Usage
 
 ```
-boot -d seancorfield/boot-new new -t provisdom-clj -n project-name
+boot -d boot/new new -t provisdom-clj -n project-name
 ```
 
 For more advanced usage see [boot-new](https://github.com/seancorfield/boot-new).
