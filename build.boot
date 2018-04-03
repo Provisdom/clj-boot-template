@@ -1,8 +1,8 @@
 (def project 'provisdom-clj/boot-template)
-(def version "0.2.5")
+(def version "0.3.0")
 
 (set-env! :resource-paths #{"src"}
-          :dependencies '[[org.clojure/clojure "1.8.0"]
+          :dependencies '[[org.clojure/clojure "1.9.0"]
                           [adzerk/bootlaces "0.1.13"]
                           [seancorfield/boot-new "0.4.7"]])
 
