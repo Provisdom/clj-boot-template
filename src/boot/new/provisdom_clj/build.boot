@@ -5,11 +5,17 @@
           :source-paths #{"test"}
           :dependencies '[[provisdom/boot-tasks "RELEASE" :scope "test"]
                           [adzerk/boot-test "RELEASE" :scope "test"]
+                          [expound "RELEASE" :scope "test"]
+                          [orchestra "RELEASE" :scope "test"]
 
                           [org.clojure/clojure "RELEASE"]])
 
 (require '[adzerk.boot-test :refer [test]]
+         '[expound.alpha]
+         '[clojure.spec.alpha]
          '[provisdom.boot-tasks.core :refer [build push-jar]])
+
+(alter-var-root #'clojure.spec.alpha/*explain-out* (constantly expound.alpha/printer))
 
 (task-options!
   pom {:project     project
